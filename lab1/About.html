@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        h1,h2,h3,h4{
+            
+            align-items:center;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+        .header{
+            background-color: #71c189;
+            margin: 0;
+            padding: 20px;
+        
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+    
+        }
+        .container div{
+            margin: 20px;
+            /* space betweenborder and elemenets  */
+            padding: 20px;
+            /* spoace between  content and border */
+        }
+        .navbar a button{
+            /* display: flex;  */
+            justify-content: center; 
+            align-items: center;
+            margin: 50px;
+            padding: 20px;
+            /* color: #71c189; */
+            border-color: black;
+            background-color: #71c189;
+            size: large;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #74a1fb;
+        }
+        .footer{
+            background-size: cover;
+            text-align: center;
+            /* margin: 20px; */
+            padding: 20px; 
+            background-color: #71c189;       }
+        .Table{
+            margin: 40px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        ul li{
+            padding: 5px;
+            text-align: center; 
+            color: white;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .navbar a button:hover{
+            background-color: #326843;
+            cursor: pointer;
+        }
+        table, th, td{
+            border: 2px solid rgb(255, 255, 255);
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        #headerRow{
+            background-color: #58bd78;
+        }
+        .Hobbies{
+            align-items:center;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "header">
+        <h1>About</h1>
+    </div>
+    <div class = "navbar">
+        <nav style="text-align: center;">
+            <a href="index.html"><button>Home</button></a>
+            <a href="About.html"><button>About</button></a>
+            <a href="Contact.html"><button>Contact</button></a>
+        </nav> 
+    </div>
+
+    <div class = "Table">
+        <table style = "text-align: center; color: white;">
+            <tr id = "headerRow">
+                <th>Programming Language</th>
+                <th>Years of Experiance</th>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>11</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class = "Hobbies">
+        <h2>Our Common Hobbies</h2>
+        <ul style = "margin-bottom: 200px;">
+            <li>Video Games</li>
+            <li>Programming</li>
+            <li>Touching grass</li>
+        </ul>
+    </div>
+
+
+    <div class = "footer">
+        <div class = "csumbLogo">
+            <img style = "width: 15%; text-align: center;" src="CSUMB Otters Logo.png" alt="CSUMB Logo" width="200">
+        </div>
+        <div class = "footerContent">
+            <h4>CST-336 Internt Programming @ 2026 Spring</h4>
+            <h4>Disclaimer this Website is for educational Purposes Only, Do not get affended please</h4>
+        </div>
+    </div>
+    
+</body>
+</html>
