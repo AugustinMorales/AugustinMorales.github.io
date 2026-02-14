@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Guess the Number Game</h1>
+            <p class="subtitle">I'm thinking of a number between 1 and 99</p>
+        </header>
+
+        <div class="game-stats">
+            <div class="stat-box">
+                <span class="stat-label">Games Won</span>
+                <span class="stat-value" id="gamesWon">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Games Lost</span>
+                <span class="stat-value" id="gamesLost">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Attempts Left</span>
+                <span class="stat-value" id="attemptsLeft">7</span>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <form id="guessForm">
+                <div class="input-group">
+                    <label for="guessInput">Enter your guess:</label>
+                    <input 
+                        type="number" 
+                        id="guessInput" 
+                        min="1" 
+                        max="99" 
+                        placeholder="1-99"
+                        required
+                    >
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="guessButton" class="btn btn-primary">
+                        Make Guess
+                    </button>
+                    <button type="button" id="resetButton" class="btn btn-secondary" style="display: none;">
+                        Reset Game
+                    </button>
+                </div>
+            </form>
+
+            <div id="message" class="message"></div>
+
+            <div class="guesses-container">
+                <h3>Your Guesses:</h3>
+                <div id="guessesList" class="guesses-list">
+                    <p class="no-guesses">No guesses yet...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
