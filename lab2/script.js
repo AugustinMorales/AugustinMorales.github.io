@@ -73,10 +73,10 @@ function endGame(won) {
     
     if (won) {
         gamesWon++;
-        displayMessage(`🎉 Congratulations! You guessed the number ${randomNumber} in ${guesses.length} attempt(s)!`, 'success');
+        displayMessage(`Congratulations! You guessed the number ${randomNumber} in ${guesses.length} attempt(s)!`, 'success');
     } else {
         gamesLost++;
-        displayMessage(`❌ You Lost! The number was ${randomNumber}`, 'lost');
+        displayMessage(`You Lost! The number was ${randomNumber}`, 'lost');
     }
     
     updateStats();
@@ -92,13 +92,13 @@ function handleGuess(e) {
     
     // Validation: Check if number is within range
     if (isNaN(guess) || guess < 1 || guess > 99) {
-        displayMessage('⚠️ Please enter a valid number between 1 and 99!', 'error');
+        displayMessage('Please enter a valid number between 1 and 99!', 'error');
         return;
     }
     
     // Check if number is higher than 99 (specific requirement)
     if (guess > 99) {
-        displayMessage('⚠️ Error: Number cannot be higher than 99!', 'error');
+        displayMessage('Error: Number cannot be higher than 99!', 'error');
         return;
     }
     
