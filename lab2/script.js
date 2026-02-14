@@ -126,9 +126,9 @@ function handleGuess(e) {
     
     // Provide feedback: high or low
     if (guess < randomNumber) {
-        displayMessage(`📈 ${guess} is too LOW! Try a higher number.`, 'info');
+        displayMessage(`${guess} is too LOW! Try a higher number.`, 'info');
     } else {
-        displayMessage(`📉 ${guess} is too HIGH! Try a lower number.`, 'info');
+        displayMessage(`${guess} is too HIGH! Try a lower number.`, 'info');
     }
     
     guessInput.focus();
