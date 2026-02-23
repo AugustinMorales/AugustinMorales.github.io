@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slot Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+    <h1>🎰 Slot Machine</h1>
+
+    <div id="balance-box">
+      Balance: $<span id="balance-val">500</span>
+    </div>
+
+    <div id="bet-box">
+      <label for="bet-input">Enter Bet ($):</label><br/>
+      <input type="number" id="bet-input" min="1" value="10" />
+    </div>
+
+    <div id="reels">
+      <div class="reel-box" id="reel-0">
+        <img id="img-0" src="" alt="symbol" />
+      </div>
+      <div class="reel-box" id="reel-1">
+        <img id="img-1" src="" alt="symbol" />
+      </div>
+      <div class="reel-box" id="reel-2">
+        <img id="img-2" src="" alt="symbol" />
+      </div>
+    </div>
+
+    <div id="result-msg"></div>
+
+    <button id="spin-btn">SPIN</button>
+
+    <div id="paytable">
+      <strong>Paytable</strong>
+      <table>
+        <tr><th>Match</th><th>Payout</th></tr>
+        <tr><td>🍒 Cherry x3</td><td>x10</td></tr>
+        <tr><td>7️⃣ Seven x3</td><td>x20</td></tr>
+        <tr><td>🍋 Lemon x3</td><td>x5</td></tr>
+        <tr><td>⭐ Star x3</td><td>x15</td></tr>
+        <tr><td>🔔 Bell x3</td><td>x8</td></tr>
+        <tr><td>Any pair</td><td>x1.5</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="slot.js"></script>
+</body>
+</html>
