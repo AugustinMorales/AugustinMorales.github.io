@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+  <header>
+    <h1>JavaScript Quiz</h1>
+    <p id="times-taken-display">Times taken: <span id="times-count">0</span></p>
+  </header>
+
+  <form id="quiz-form" novalidate>
+
+    <!-- Q1: Radio buttons (choices randomized via JS) -->
+    <div class="question-block" id="q1-block">
+      <p class="question-text">1. Which keyword declares a variable that <strong>cannot</strong> be reassigned?</p>
+      <div id="q1-options" class="options-group" role="radiogroup" aria-labelledby="q1-label"></div>
+      <div class="feedback" id="q1-feedback"></div>
+    </div>
+
+    <!-- Q2: Checkboxes — select all that apply -->
+    <div class="question-block" id="q2-block">
+      <p class="question-text">2. Which of the following are valid JavaScript data types? <em>(Select all that apply)</em></p>
+      <div class="options-group">
+        <label class="option-label">
+          <input type="checkbox" name="q2" value="string" /> String
+        </label>
+        <label class="option-label">
+          <input type="checkbox" name="q2" value="boolean" /> Boolean
+        </label>
+        <label class="option-label">
+          <input type="checkbox" name="q2" value="character" /> Character
+        </label>
+        <label class="option-label">
+          <input type="checkbox" name="q2" value="undefined" /> Undefined
+        </label>
+      </div>
+      <div class="feedback" id="q2-feedback"></div>
+    </div>
+
+    <!-- Q3: Dropdown / Select -->
+    <div class="question-block" id="q3-block">
+      <p class="question-text">3. What does <code>typeof null</code> return in JavaScript?</p>
+      <label for="q3-select" class="sr-only">Select an answer</label>
+      <select id="q3-select" name="q3">
+        <option value="">-- Choose an answer --</option>
+        <option value="null">null</option>
+        <option value="object">"object"</option>
+        <option value="undefined">"undefined"</option>
+        <option value="number">"number"</option>
+      </select>
+      <div class="feedback" id="q3-feedback"></div>
+    </div>
+
+    <!-- Q4: Text input -->
+    <div class="question-block" id="q4-block">
+      <p class="question-text">4. What method is used to add an element to the <strong>end</strong> of an array? (type the method name without parentheses)</p>
+      <label for="q4-input" class="sr-only">Your answer</label>
+      <input type="text" id="q4-input" name="q4" placeholder="Your answer..." autocomplete="off" />
+      <div class="feedback" id="q4-feedback"></div>
+    </div>
+
+    <!-- Q5: Radio buttons (randomized) -->
+    <div class="question-block" id="q5-block">
+      <p class="question-text">5. Which symbol is used for strict equality in JavaScript?</p>
+      <div id="q5-options" class="options-group" role="radiogroup" aria-labelledby="q5-label"></div>
+      <div class="feedback" id="q5-feedback"></div>
+    </div>
+
+    <div id="form-actions">
+      <button type="button" id="submit-btn">Submit Quiz</button>
+      <button type="button" id="reset-btn">Retake Quiz</button>
+    </div>
+
+  </form>
+
+  <div id="results-box" class="hidden">
+    <h2>Your Score: <span id="final-score">0</span> / 100</h2>
+    <p id="congrats-msg" class="hidden">🎉 Congratulations! Excellent work!</p>
+    <p>Total times this quiz has been taken: <strong><span id="results-times">0</span></strong></p>
+  </div>
+
+</div>
+
+<script src="quiz.js"></script>
+</body>
+</html>
