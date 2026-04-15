@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Famous Quotes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="bg-overlay"></div>
+
+<div id="app">
+  <header>
+    <h1>Famous Quotes</h1>
+    <p>CST336 · Midterm Exam Practice</p>
+  </header>
+
+  <!-- SECTION 1: Random Quote -->
+  <div class="card" style="animation-delay:0.05s">
+    <h2>Quote of the Day</h2>
+    <div id="quote-text" class="loading">Loading quote…</div>
+    <div id="quote-author"></div>
+    <br>
+    <button class="btn btn-outline" onclick="toggleAuthorInfo()">Display Author Info</button>
+    <div id="author-info-section">
+      <div id="author-layout">
+        <img id="author-img" src="" alt="Author" style="display:none">
+        <p id="author-bio"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3-4: Translate -->
+  <div class="card" style="animation-delay:0.12s">
+    <h2>Translate Quote</h2>
+    <div id="languages-grid"></div>
+    <button class="btn btn-primary" onclick="translateQuote()">Translate</button>
+
+    <div id="translation-result">
+      <p><img id="flag-img" src="" alt="flag"><strong id="lang-label-result"></strong></p>
+      <div id="translated-text"></div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Get Quotes -->
+  <div class="card" style="animation-delay:0.19s">
+    <h2>Get Multiple Quotes</h2>
+    <div id="quotes-input-row">
+      <label for="num-quotes-input">Number of quotes (1–5):</label>
+      <input type="text" id="num-quotes-input" placeholder="e.g. 3">
+      <button class="btn btn-primary" onclick="getQuotes()">Get Quotes</button>
+    </div>
+    <div id="quotes-error">Please enter a number between 1 and 5.</div>
+    <div id="quotes-list"></div>
+  </div>
+
+  <!-- RUBRIC -->
+  <div class="card" id="rubric-section" style="animation-delay:0.26s">
+    <h2>Rubric</h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Task Description</th><th>Points</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td class="rubric-green">A random quote and corresponding author is displayed when loading the page</td><td>20</td></tr>
+        <tr><td>2</td><td class="rubric-green">The author's bio and picture is displayed when clicking on the "Display Author Info" button</td><td>15</td></tr>
+        <tr><td>3</td><td class="rubric-green">The author's bio and picture are displayed in a two-column layout using a flex box</td><td>10</td></tr>
+        <tr><td>4</td><td class="rubric-green">The language choices (radio buttons) are displayed in a random order every time the page is reloaded</td><td>20</td></tr>
+        <tr><td>5</td><td class="rubric-green">The corresponding language flag is displayed when clicking on the "Translate" button</td><td>20</td></tr>
+        <tr><td>6</td><td class="rubric-green">The random quote displayed is translated into the language selected when clicking on the "Translate" button</td><td>20</td></tr>
+        <tr><td>7</td><td class="rubric-green">An error message in red is displayed if the value entered in the "Number of Quotes" text box is not between 1 and 5 or if it's left blank</td><td>20</td></tr>
+        <tr><td>8</td><td class="rubric-green">The specified number of quotes and corresponding authors (1 to 5) are displayed when clicking on the "Get Quotes" button</td><td>20</td></tr>
+        <tr><td>9</td><td class="rubric-green">A random background image is displayed every time the page is reloaded using the Web API provided</td><td>20</td></tr>
+        <tr><td>10</td><td class="rubric-green">This rubric is properly included AND UPDATED</td><td>3</td></tr>
+        <tr><td></td><td><strong>T O T A L</strong></td><td><strong>168</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- end #app -->
+
+<script src="scripts.js"></script>
+</body>
+</html>

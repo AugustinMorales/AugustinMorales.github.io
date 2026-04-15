@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<div class="page-wrapper">
+  <div class="masthead">
+    <p class="masthead-eyebrow">Join Us Today</p>
+    <h1>Create Your<br><span>Account</span></h1>
+  </div>
+
+  <div class="card-form">
+    <form id="signupForm" novalidate>
+
+      <!-- SECTION 1: Account -->
+      <div class="section-title"><span class="num">1</span> Account Details</div>
+
+      <div class="mb-3">
+        <label for="username">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Choose a username" autocomplete="off">
+        <div class="feedback-msg" id="usernameFeedback"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="At least 6 characters">
+        <div class="suggested-pass" id="suggestedPass">
+          💡 Suggested: <strong id="suggestedPassText"></strong>
+          <span>(click to use)</span>
+        </div>
+        <div class="feedback-msg" id="passwordFeedback"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="retypePassword">Retype Password</label>
+        <input type="password" id="retypePassword" class="form-control" placeholder="Confirm your password">
+        <div class="feedback-msg" id="retypeFeedback"></div>
+      </div>
+
+      <!-- SECTION 2: Location -->
+      <div class="section-title"><span class="num">2</span> Location</div>
+
+      <div class="mb-3">
+        <label for="state">State</label>
+        <select id="state" class="form-select">
+          <option value="">Loading states…</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="county">County</label>
+        <select id="county" class="form-select">
+          <option value="">Select a state first</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="zipcode">Zip Code</label>
+        <input type="text" id="zipcode" class="form-control" placeholder="e.g. 90210" maxlength="5">
+        <div class="feedback-msg" id="zipFeedback"></div>
+      </div>
+
+      <div class="geo-grid mb-2">
+        <div>
+          <label for="city">City</label>
+          <input type="text" id="city" class="form-control geo-readonly" readonly placeholder="Auto-filled">
+        </div>
+        <div>
+          <label for="latitude">Latitude</label>
+          <input type="text" id="latitude" class="form-control geo-readonly" readonly placeholder="Auto-filled">
+        </div>
+        <div>
+          <label for="longitude">Longitude</label>
+          <input type="text" id="longitude" class="form-control geo-readonly" readonly placeholder="Auto-filled">
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit">Create Account →</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
